@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Download Build
-        uses: actions/donwload-artifact@v2
+        uses: actions/download-artifact@v2
         with:
           name: build
           path: build
@@ -52,5 +52,5 @@ jobs:
         with:
           args: deploy --only hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIRBASE_TOKEN }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
